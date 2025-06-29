@@ -35,6 +35,10 @@ The tool generates strained structures (in `x`, `y`, and `xy` directions) for fu
 
    > The `z` direction remains fixed in all cases (suitable for 2D materials).
 
+   ```bash
+   python3 generate_folders.py
+   ```
+
 2. **Structure Relaxation**:
    Run the `run.sh` script to iterate through each generated folder and launch the SIESTA relaxation:
 
