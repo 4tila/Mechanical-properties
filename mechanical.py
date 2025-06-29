@@ -9,7 +9,7 @@ strain_x, strain_y = list(), list() # list of pairs of (strain applied to fixed 
                                     # (strain applied to fixed y axis, starin on x axis)
 A = list(map(float, popen(f'sed -n 1p ./{STRUCT_OUT}').read().strip().split() ))
 B = list(map(float, popen(f'sed -n 2p ./{STRUCT_OUT}').read().strip().split() ))
-A_0 = A[0]*B[1]-A[1]*B[0] # modulus of cross product equals the area with A[2]=B[2]=0
+A_0 = abs(A[0]*B[1]-A[1]*B[0]) # modulus of cross product equals the area with A[2]=B[2]=0
 
 norm_A = float(np.linalg.norm(A))
 norm_B = float(np.linalg.norm(B))
