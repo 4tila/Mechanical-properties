@@ -4,8 +4,6 @@ cte = 1.602176634e1 # convert between eV/ang^2 to J/m^2=N/m
 STRUCT_OUT = 'X'
 ls = popen('ls -d mec*').read().split()
 
-ls = ls[0:60] # TODO remove this line
-
 E_xy, E_x, E_y = list(), list(), list() # energy curves for each type of strain
 strain_x, strain_y = list(), list() # list of pairs of (strain applied to fixed x axis, strain on y axis) and
                                     # (strain applied to fixed y axis, starin on x axis)
