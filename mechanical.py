@@ -1,7 +1,7 @@
 import numpy as np
 from os import popen
 cte = 1.602176634e1 # convert between eV/ang^2 to J/m^2=N/m
-STRUCT_OUT = 'X'
+STRUCT_OUT = 'X' # name of STRUCT_OUT used to generate the structures
 ls = popen('ls -d mec*').read().split()
 
 E_xy, E_x, E_y = list(), list(), list() # energy curves for each type of strain
