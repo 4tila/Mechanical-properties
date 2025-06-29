@@ -66,7 +66,7 @@ cell,supercell_positions = from_STRUCT('G.STRUCT_OUT')
 #..............................................
 #                   XY
 #..............................................
-for i in range(-5, 41, 1):
+for i in range(-5, 41, 1): # -5 to 5 are to compute compute constants, the rest is used for finding rupture points
     alpha=1+i/100
     x=[alpha*cell[0][j] for j in range(3)]
     y=[alpha*cell[1][j] for j in range(3)]
