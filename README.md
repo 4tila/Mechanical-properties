@@ -79,8 +79,10 @@ The tool generates strained structures (in `x`, `y`, and `xy` directions) for fu
 * Ensure your SIESTA relaxation includes accurate force convergence and proper boundary conditions.
 * The use of a **supercell** is strongly recommended to reduce numerical noise and improve strain accuracy.
 * Make sure your `STRUCT_OUT` file reflects a **fully optimized** structure before beginning.
+* This project uses standard pseudopotentials (e.g., H.psf, C.psf). These are not included in the repository, but can be downloaded from official SIESTA resources or PseudoDojo.
 
 ---
+
 
 ## 📜 License
 
