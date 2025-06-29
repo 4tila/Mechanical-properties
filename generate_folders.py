@@ -56,11 +56,7 @@ def create_dir(foldername, cell, xy=str(), comment=str()):
     with open(f"./{foldername}/positions.fdf", 'w+') as f: f.write(position_file(cell, comment=comment))
     N+=1
     return;
-#       usefull bash commands
-#       grep "Etot" G.out | awk '{print $4}'
-#       awk '/Stress tensor \(total\)/ {print; count=3; next} count > 0 {print; count--}' G.out
-#       
-
+    
 cell,supercell_positions = from_STRUCT('G.STRUCT_OUT')
 
 #..............................................
