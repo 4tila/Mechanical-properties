@@ -1,0 +1,40 @@
+SystemName            G
+SystemLabel           G
+
+NumberOfSpecies            2
+%block Chemical_Species_label
+  1   1   H
+  2   6   C
+%endblock Chemical_Species_label
+
+%include positions.fdf
+
+PAO.BasisType              split        
+PAO.BasisSize              DZP                 
+PAO.EnergyShift            0.01  Ry            
+PAO.SplitNorm              0.15                
+
+MeshCutoff                800.0  Ry       
+xc.functional             GGA    
+xc.authors                PBE	
+
+SCF.MustConverge          F
+MaxSCFIterations          1000
+DM.NumberPulay            5
+DM.MixingWeight           0.10          
+DM.Tolerance              1.d-5
+DM.UseSaveDM              yes
+NeglNonOverlapInt         false         
+SolutionMethod            Diagon        
+ElectronicTemperature     0.0019 Ry                     
+
+MD.TypeOfRun              CG 
+MD.VariableCell           F
+MD.Relax.Cell 		  F     # Ensure cell is fixed
+MD.NumCGsteps             1000                                             
+MD.MaxForceTol            0.0010 eV/Ang                                    
+
+StressTensor              .true.
+
+WriteForces               T
+WriteCoorXmol             T
