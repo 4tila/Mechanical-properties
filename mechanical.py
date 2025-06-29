@@ -51,7 +51,7 @@ epsx= [E_x[i][0]/100 for i in range(len(E_x)) if abs(E_x[i][0])<=threshold] # ar
 E = [E_x[i][1] for i in range(len(E_x)) if abs(E_x[i][0])<=threshold]
 p = np.polyfit(epsx, E, 2)
 Y2D_x = 2*p[0]*cte/A_0
-print(f"2D Young modulus with x fixed= {Y2D_x} J/m^2")
+print(f"2D Young modulus with x fixed= {Y2D_x} N/m")
 eps1 = [strain_x[i][0]/100 for i in range(len(strain_x)) if abs(strain_x[i][0])<=threshold]
 eps2 = [strain_x[i][1] for i in range(len(strain_x)) if abs(strain_x[i][0])<=threshold]
 p=np.polyfit(eps1, eps2, 1)
@@ -68,7 +68,7 @@ epsx= [E_y[i][0]/100 for i in range(len(E_y)) if abs(E_y[i][0])<=threshold] # ar
 E = [E_y[i][1] for i in range(len(E_y)) if abs(E_y[i][0])<=threshold]
 p = np.polyfit(epsx, E, 2)
 Y2D_y = 2*p[0]*cte/A_0
-print(f"2D Young modulus with y fixed= {Y2D_y} J/m^2")
+print(f"2D Young modulus with y fixed= {Y2D_y} N/m")
 eps1 = [strain_y[i][0]/100 for i in range(len(strain_y)) if abs(strain_y[i][0])<=threshold]
 eps2 = [strain_y[i][1] for i in range(len(strain_y)) if abs(strain_y[i][0])<=threshold]
 p=np.polyfit(eps1, eps2, 1)
