@@ -76,7 +76,7 @@ eps1 = [strain_y[i][0]/100 for i in range(len(strain_y)) if abs(strain_y[i][0])<
 eps2 = [strain_y[i][1] for i in range(len(strain_y)) if abs(strain_y[i][0])<=threshold]
 p=np.polyfit(eps1, eps2, 1)
 poisson_y = -p[0]
-print(f"poisson coefficient with x fixed = {poisson_y}")
+print(f"poisson coefficient with y fixed = {poisson_y}")
 
 pred_bulk = Y2D_y/(2*(1-poisson_y))
 print(f"Expected bulk modulus of {pred_bulk:.4f} with error of {100*abs(pred_bulk/bulk_modulus-1):.4f}% with relation to computed bulk modulus")
